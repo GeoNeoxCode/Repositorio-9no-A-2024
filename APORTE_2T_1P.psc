@@ -1,30 +1,18 @@
-Proceso APORTE
-	Definir n1,n2,n3 como real;
-	Definir s Como Logico;
-	S<-Verdadero;
-	Repetir
-		Escribir "Ingrese 3 números para verficar cuál es menor.";
-		Esperar 2 Segundos;
-		escribir "ingrese el primer número";
-		leer n1;
-		escribir "ingrese el segundo número";
-		leer n2;
-		escribir "ingrese el tercer número";
-		leer n3;
-		si n1<=n2 y n1<=n3 Entonces
-			Escribir "El número menor es ", n1;
-		SiNo
-			si n2<=n3 y n2<=n1 Entonces
-				Escribir "El número menor es ", n2;
-			SiNo
-				si n3<=n1 y n3<=n2 Entonces
-					Escribir "El número menor es ", n3;
-				FinSi
-			FinSi
-		FinSi
-		Escribir "¿Desea sacar el número menor de otros 3 números?";
-		Escribir "Verdadero o Falso";
-		leer s;
-	Hasta Que S=Falso
-	Escribir "Adiós";
+Proceso APORTE_2T_1P
+	Definir vector1, vector2, resultado Como Real; //Define las variables de los vectores.
+	Definir a Como Entero;						//Define "a" que será utilizado para los bucles "para".
+	Dimension vector1(4), vector2(4), resultado(4);
+	Escribir "Ingrese 4 números";					//Pide que ingrese los primeros 4 números.
+	Para a<-0 hasta 3 Con Paso 1 Hacer
+		Leer vector1(a);
+	FinPara
+	Escribir "Ingrese otros 4 números";			//Pide que ingrese los otros 4 números.
+	Para a<-0 hasta 3 Con Paso 1 Hacer
+		Leer vector2(a);
+	FinPara
+	Escribir "La multiplicación de ambos vectores da:";
+	Para a<-0 hasta 3 Con Paso 1 Hacer
+		resultado(a)<-vector1(a)*vector2(a);			//Calcula la multiplicación de ambos vectores y almacena la respuesta en "resultado".
+		Escribir vector1(a), " × ", vector2(a), " = ", resultado(a); //Muestra los resultados.
+	FinPara										//FACILISIMO VERDAD.
 FinProceso
